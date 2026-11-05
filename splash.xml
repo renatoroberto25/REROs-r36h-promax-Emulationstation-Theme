@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+   <formatVersion>7</formatVersion>
+   <view name="splash">
+      <splash name="splash">
+         <backgroundColor>10081D</backgroundColor>
+      </splash>
+      <image name="background">
+         <!-- Leave default for better OS/device portability -->
+      </image>
+      <image name="progressbar">
+         <color>2B1943</color>
+         <colorEnd>2B1943</colorEnd>
+         <roundCorners>0.01</roundCorners>
+      </image>
+      <image name="progressbar:active">
+         <color>B6FF43</color>
+         <colorEnd>B6FF43</colorEnd>
+      </image>
+      <text name="label">
+         <alignment>center</alignment>
+         <fontPath>./_inc/fonts/Rajdhani-Bold.ttf</fontPath>
+         <fontSize>0.04</fontSize>
+         <color>F2EBFF</color>
+      </text>
+   </view>
+</theme>
