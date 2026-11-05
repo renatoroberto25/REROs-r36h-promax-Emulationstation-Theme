@@ -1,69 +1,98 @@
-# es-theme-minimal
+# RENATO // NEON
 
-**Words from the creator [lilbud](https://github.com/lilbud)**
+Tema visual cyberpunk para EmulationStation / ArkOS com estética neon em verde e roxo, foco em layout 4:3 e navegação com visual moderno e limpo.
 
-> This theme is an attempt at making EmulationStation look more like a game system.
+![Prévia do tema](docs/preview.png)
 
-> Modern Game Systems (PS4, Xbox One, Switch, etc.) deliver a very specific experience compared to a computer. You turn it on, see a simple boot screen, and are in the menu in seconds. You know what you are getting in to. It's made abundantly clear that this is a video game machine. The games are front and center, and everything is wrapped up in a clean, minimal, interface...
+## Introdução
 
-> That is what I believe sets a game system apart from the Raspberry Pi. Sure, the interface is fast, and somewhat nice looking. But it doesn't feel like a video game system. This is where the Minimal theme steps in.
+O tema `RENATO // NEON` foi desenvolvido para criar uma interface de seleção de sistemas e jogos com visual futurista, alta legibilidade e organização inspirada em consoles retrô e ambientes cyberpunk.
 
-**This theme was made by lilbud / https://github.com/lilbud/es-theme-minimal**
+Ele inclui:
 
----
+- tela de sistemas com carousel centralizado;
+- lista de jogos em visual `Basic`, `Detailed` e `Video`;
+- fundo com identidade visual neon;
+- logo de sistema por catálogo;
+- metadata de jogos com imagem, descrição e vídeo;
+- suporte a relógio, bateria e ícone de rede quando disponibilizado pelo firmware.
 
-# Abilities
+## Estrutura do projeto
 
-This theme is super sleak and you can set VRAM to 40MB on a Raspberry system. \
-So this is the smallest theme in foorprint as far as I know. \
-\
-This theme is highly customizable, you can change from **three** amazing layout by altering `theme.xml`\
-Version 1 gets the original theme setting back as it was released 2017, whereas version 2 is a modernized layout in game list mode. Like the original author did, I decided to keep version 2 as default. The third option is a slighlty improved v1.
+- `theme.xml` — configuração principal do tema.
+- `splash.xml` — estilos da tela de carregamento.
+- `_inc/` — fontes, sons, assets visuais, logos e imagens de apoio.
+- `scripts/` — scripts para geração de assets e pacote do tema.
+- `dist/` — pacote final empacotado para instalação.
+- `docs/` — prévias e documentação visual.
 
-You can always add new backgrounds to the theme by altering the `bg.png` file.
+## Requisitos
 
-You can get rid off the "blurry" looking overlay by altering the overlay color inside the version assets, by removing the color code line.
+- EmulationStation com suporte a temas do ArkOS.
+- Compatibilidade com layouts em 4:3.
+- Arquivos do tema em pasta `themes` no dispositivo de armazenamento do console.
+
+## Instalação
+
+1. Faça o download ou use o pacote em `dist/RENATO-THEME.zip`.
+2. Extraia o conteúdo na pasta `themes` do seu cartão/partição de ROMs.
+3. O resultado esperado é algo como:
+
+```text
+themes/
+└── RENATO-THEME/
+    ├── theme.xml
+    ├── splash.xml
+    └── _inc/
 ```
-		<image name="background" extra="true">
-			<size>1 1</size>
-			<pos>0 0</pos>
-			<origin>0 0</origin>
-			<path>./../assets/bg.png</path>
-			<zIndex>0</zIndex>
-			<color>10667f</color>
-		</image>
+
+4. No console, vá em:
+
+```text
+START → UI Settings → Theme → RENATO-THEME
 ```
 
-# Changes
+5. Escolha a visualização desejada: `Basic`, `Detailed` ou `Video`.
 
-2019/06/05
+## Personalização
 
-Added background image from Minimal v1 to `_extras` \
-Enabled help system, this is can be disabled/enabled into ES now
+Os principais pontos de ajuste estão em:
 
-* 2019/06/06
-  * Added picture for Screenshots (BATOCERA/RECALBOX), own creation \
-  * Added picture for ZX81, GX68000 and recolored Virtual Boy and Odyssey2 (=VIDEOPAC) \
-  * Added picture for prboom (thx norbert79 from devianart for the B/W UAC graphics)
-* 2019/06/07
-  * Added background image from theme version 1.0 as default (the hexagons) \
-  * Reencoded some files that were named as PNG but actually contained JPG.
-* 2019/06/09
-  * Added CPS1, CPS2, CPS3 system icons, recolored them (thank you anthonycaccese for your ArtBook theme) \
-  * Readded Odyssey2 system icon, did some recoloring
-* 2019/08/28
-  * Added Solarus RPG system icon, recolored it (thank you to the Solarus Team designer, https://www.solarus-games.org/)
-* 2019/10/04
-  * Added OpenBOR system, ripped from RetroPie with some heavy recoloring
+- `theme.xml` — textos, cores, fontes, tamanhos e posições;
+- `splash.xml` — paleta da tela de inicialização;
+- `_inc/neon/` — fundos e recursos visuais;
+- `_inc/neon/logos/` — logos dos sistemas;
+- `_inc/fonts/` — fontes utilizadas.
 
-# Preview
+## Geração de assets
 
-Get in touch with the original theme author in [this thread via RetroPie Forum](https://retropie.org.uk/forum/topic/12435/)
+Se você alterar SVGs, fundos ou logos, use os scripts do projeto para rebuildar os arquivos de distribuição:
 
-### `V2.xml` theme (default)
+```bash
+python3 scripts/build_assets.py
+python3 scripts/preview.py
+python3 scripts/package.py
+```
 
-![](https://i.imgur.com/KEEBkcO.png)
+Esses comandos geram os recursos finais e o zip de instalação para o tema.
 
-### `V1.xml` theme
+## Observações
 
-![](https://i.imgur.com/5UR5yTF.png)
+- O tema foi pensado para o uso em telas 4:3.
+- A aparência final pode variar conforme o firmware do console e os recursos disponíveis do sistema.
+- O relógio, bateria e indicação de rede dependem do suporte do ambiente do ArkOS/EmulationStation.
+
+## Créditos
+
+- Base e recursos inspirados em temas de referência do ecossistema EmulationStation / ArkOS.
+- Fontes incluídas:
+  - Rajdhani Bold
+  - Cabin Bold
+- Licenças das fontes estão em:
+  - `_inc/fonts/Rajdhani-OFL.txt`
+  - `_inc/fonts/Cabin-OFL.txt`
+
+## Referências
+
+- [Wiki de temas do ArkOS](https://github.com/christianhaitian/arkos/wiki/Themes)
+- [EmulationStation (ArkOS fork)](https://github.com/christianhaitian/EmulationStation-fcamod)

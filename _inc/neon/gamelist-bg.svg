@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="768" viewBox="0 0 1024 768">
+  <defs>
+    <radialGradient id="purple"><stop stop-color="#9A62FF" stop-opacity=".1"/><stop offset="1" stop-color="#9A62FF" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#9A62FF" stroke-opacity=".045"/></pattern>
+  </defs>
+  <path fill="#10081D" d="M0 0h1024v768H0z"/>
+  <ellipse cx="900" cy="360" rx="420" ry="390" fill="url(#purple)"/>
+  <path fill="url(#grid)" d="M0 150h1024v560H0z"/>
+  <g fill="none" stroke="#9A62FF" stroke-opacity=".18">
+    <path d="M22 156h208l15 15h158m236-15h250l20-20h93M22 695h188l18-18h111m341 18h232l18-18h72"/>
+    <path d="M19 225v107l15 15v184m971-306v107l-15 15v184"/>
+    <path d="M40 14h944M40 754h944" stroke-opacity=".07"/>
+  </g>
+  <g fill="#B6FF43">
+    <path d="M52 140h44v3H52zM100 140h8v3h-8zM916 140h56v3h-56zM52 704h7v3h-7zM64 704h7v3h-7zM76 704h28v3H76z"/>
+    <circle cx="403" cy="171" r="2" opacity=".6"/>
+  </g>
+  <path d="M43 215l15-15h402l15 15v440l-15 15H58l-15-15z" fill="#1B102D" fill-opacity=".82" stroke="#9A62FF" stroke-opacity=".24"/>
+  <path d="M526 215l15-15h416l15 15v250l-15 15H541l-15-15z" fill="#1B102D" stroke="#9A62FF" stroke-opacity=".45"/>
+  <path d="M534 220l12-12h406l12 12v240l-12 12H546l-12-12z" fill="none" stroke="#9A62FF" stroke-opacity=".1"/>
+  <path d="M526 517l15-15h416l15 15v138l-15 15H541l-15-15z" fill="#1B102D" fill-opacity=".58" stroke="#9A62FF" stroke-opacity=".16"/>
+  <g fill="none" stroke="#B6FF43" stroke-width="2">
+    <path d="M43 238v-23l15-15h48M900 480h57l15-15v-23M526 540v-23l15-15h40"/>
+  </g>
+  <g fill="#9A62FF" opacity=".4">
+    <path d="M489 221h3v16h-3zm0 24h3v6h-3zm0 392h3v16h-3z"/>
+  </g>
+</svg>

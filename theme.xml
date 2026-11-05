@@ -1,328 +1,242 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-Theme: Minimal
-Original author: Lilbud
-License: creative commons CC-BY-NC-SA
--->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- RENATO // NEON — EmulationStation / ArkOS, 4:3 -->
 <theme>
   <formatVersion>7</formatVersion>
-  
-  <view name="screen">
-	
-    <controllerActivity name="controllerActivity">
-      <pos>0.832 0.025</pos>
-      <size>0.085 0.025</size>
-      <horizontalAlignment>right</horizontalAlignment>
-      <itemSpacing>0.003</itemSpacing>
-      <imagePath>./assets/gamepad.svg</imagePath>
-      <color>FFFFFF80</color>
-      <activityColor>A0A0FFC0</activityColor>
-      <hotkeyColor>FFA0A0C0</hotkeyColor>
-    </controllerActivity>
-	
-  </view>
-  
-  <view name="menu">
-  
-    <menuText name="menutitle">
-      <fontPath>./assets/noto.ttf</fontPath>
-      <fontSize>0.044</fontSize>
-      <color>ffffff</color>
-    </menuText>
-	
-    <menuText name="menufooter">
-      <fontPath>./assets/SST.ttf</fontPath>
-      <fontSize>0.02</fontSize>
-    </menuText>
-	
-    <menuText name="menutext">
-      <fontPath>./assets/SST.ttf</fontPath>
-      <fontSize>0.038</fontSize>
-      <color>A6C6D1</color>
-      <selectorColor>0F85A5</selectorColor>
-      <selectorColorEnd>0F6585</selectorColorEnd>
-      <selectedColor>ffffff</selectedColor>
-      <separatorColor>0C3F53</separatorColor>
-    </menuText>
-	
-    <menuTextSmall name="menutextsmall">
-      <fontPath>./assets/SST.ttf</fontPath>
-      <fontSize>0.02</fontSize>
-    </menuTextSmall>
-	
-    <menuBackground name="menubg">
-      <color>0A354A</color>
-      <cornerSize>32 32</cornerSize>
-      <path>./assets/frame.png</path>
-    </menuBackground>
-	
-  </view>
-  
-  <view name="system">
-  
-    <image name="staticBackground">
-      <size>1 1</size>
-      <pos>0 0</pos>
-      <origin>0 0</origin>
-      <tile>false</tile>
-      <linearSmooth>true</linearSmooth>
-      <path>./assets/bg.png</path>
-      <zIndex>0</zIndex>
-      <color>10667f</color>
-    </image>
-	
-    <image name="logo">
-      <path>./art/${system.theme}.svg</path>
-	  <path>./art/${system.theme}.png</path>
-      <reflexion>0.16 0.0</reflexion>
-      <!-- <verticalAlignment>bottom</verticalAlignment> -->
-      <reflexionOnFrame>true</reflexionOnFrame>
-    </image>
-	
-    <text name="logoText">
-      <fontPath>./assets/miss.ttf</fontPath>
-      <fontSize>0.092</fontSize>
-      <color>FFFFFFFF</color>
-      <reflexion>0.16 0.0</reflexion>
-      <reflexionOnFrame>true</reflexionOnFrame>
-    </text>
-	
-  </view>
-  
-  <view name="basic">
-  
-    <text name="description" extra="true">
-      <pos>0.605 0.685</pos>
-      <size>0.347 0.183</size>
-      <alignment>center</alignment>
-      <color>ffffff</color>
-      <fontSize>0.025</fontSize>
-      <text>No Information Available</text>
-      <fontPath>./assets/noto.ttf</fontPath>
-    </text>
-	
-    <image name="none" extra="true">
-      <origin>0.5 0.5</origin>
-      <pos>0.776 0.388</pos>
-      <maxSize>0.347 0.46</maxSize>
-      <path>./assets/no_boxart.png</path>
-    </image>
-	
-  </view>
-  
-  <view name="basic, detailed, grid">
-	
+  <variables>
+    <accent>B6FF43</accent>
+    <purple>9A62FF</purple>
+    <text>F2EBFF</text>
+    <muted>A99ABE</muted>
+    <titleFont>./_inc/fonts/Rajdhani-Bold.ttf</titleFont>
+    <bodyFont>./_inc/fonts/Cabin-Bold.ttf</bodyFont>
+  </variables>
+
+  <view name="system,basic,detailed,video">
     <image name="background" extra="true">
-      <size>1 1</size>
       <pos>0 0</pos>
-      <origin>0 0</origin>
-      <path>./assets/bg.png</path>
-      <zIndex>0</zIndex>
-      <color>10667f</color>
-    </image>
-	
-    <image name="backgroundx" extra="true">
       <size>1 1</size>
-      <pos>0 0</pos>
-      <origin>0 0</origin>
-      <path>./assets/gamelist.png</path>
+      <path>./_inc/neon/basic-bg.png</path>
       <zIndex>0</zIndex>
-      <color>FFFFFFFF</color>
     </image>
-	
-    <text name="system_name" extra="true">
-      <text>${system.fullName}</text>
-      <forceUppercase>0</forceUppercase>
-      <size>0.5 0.025</size>
-      <pos>0.02 0.025</pos>
-      <color>ffffff</color>
-      <fontPath>./assets/SST.ttf</fontPath>
-      <fontSize>0.04</fontSize>
-      <zIndex>2</zIndex>
+    <text name="brand" extra="true">
+      <pos>0.052 0.042</pos>
+      <size>0.58 0.065</size>
+      <text>RENATO // NEON</text>
+      <fontPath>${titleFont}</fontPath>
+      <fontSize>0.052</fontSize>
+      <color>${accent}</color>
+      <zIndex>10</zIndex>
     </text>
-	
-    <text name="md_lbl_genre, md_genre, md_lbl_rating, md_lbl_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_releasedate">
+    <text name="tagline" extra="true">
+      <pos>0.054 0.108</pos>
+      <size>0.62 0.03</size>
+      <text>RETROGAMES / MODO CYBERPUNK</text>
+      <fontPath>${titleFont}</fontPath>
+      <fontSize>0.023</fontSize>
+      <color>${muted}</color>
+      <zIndex>10</zIndex>
+    </text>
+    <helpsystem name="help">
+      <pos>0.052 0.945</pos>
+      <origin>0 0</origin>
+      <fontPath>${titleFont}</fontPath>
+      <fontSize>0.025</fontSize>
+      <textColor>${text}</textColor>
+      <iconColor>${accent}</iconColor>
+    </helpsystem>
+  </view>
+
+  <view name="system">
+    <image name="background">
+      <path>./_inc/neon/system-bg.png</path>
+    </image>
+    <text name="section" extra="true">
+      <pos>0.052 0.225</pos>
+      <size>0.8 0.045</size>
+      <text>01 / ESCOLHA SEU SISTEMA</text>
+      <fontPath>${titleFont}</fontPath>
+      <fontSize>0.031</fontSize>
+      <color>${purple}</color>
+    </text>
+    <carousel name="systemcarousel">
+      <type>horizontal</type>
+      <pos>0.155 0.39</pos>
+      <size>0.69 0.23</size>
+      <color>00000000</color>
+      <logoSize>0.49 0.15</logoSize>
+      <logoScale>1</logoScale>
+      <maxLogoCount>1</maxLogoCount>
+      <logoAlignment>center</logoAlignment>
+      <defaultTransition>slide</defaultTransition>
+      <scrollSound>./_inc/sounds/select_shorter.wav</scrollSound>
+      <zIndex>40</zIndex>
+    </carousel>
+    <image name="logo">
+      <path>./_inc/neon/logos/${system.theme}.svg</path>
+      <color>${accent}</color>
+    </image>
+    <text name="logoText">
+      <fontPath>${titleFont}</fontPath>
+      <fontSize>0.065</fontSize>
+      <color>${accent}</color>
+      <forceUppercase>true</forceUppercase>
+    </text>
+    <text name="system-name" extra="true">
+      <pos>0.10 0.7</pos>
+      <size>0.80 0.055</size>
+      <text>${system.fullName}</text>
+      <fontPath>${titleFont}</fontPath>
+      <fontSize>0.036</fontSize>
+      <forceUppercase>true</forceUppercase>
+      <alignment>center</alignment>
+      <color>${text}</color>
+    </text>
+    <text name="systemInfo">
+      <pos>0.10 0.78</pos>
+      <size>0.80 0.04</size>
+      <fontPath>${titleFont}</fontPath>
+      <fontSize>0.027</fontSize>
+      <alignment>center</alignment>
+      <color>${muted}</color>
+      <backgroundColor>00000000</backgroundColor>
+    </text>
+  </view>
+
+  <view name="basic,detailed,video">
+    <text name="section" extra="true">
+      <pos>0.052 0.205</pos>
+      <size>0.88 0.042</size>
+      <text>02 / ${system.fullName}</text>
+      <fontPath>${titleFont}</fontPath>
+      <fontSize>0.031</fontSize>
+      <forceUppercase>true</forceUppercase>
+      <color>${purple}</color>
+    </text>
+    <image name="logo,md_thumbnail,md_marquee">
+      <visible>false</visible>
+    </image>
+    <text name="logoText,md_name,md_lbl_rating,md_lbl_releasedate,md_lbl_developer,md_lbl_publisher,md_lbl_genre,md_lbl_players,md_lbl_lastplayed,md_lbl_playcount,md_developer,md_publisher,md_genre,md_players,md_playcount">
       <visible>false</visible>
     </text>
-	
+    <datetime name="md_lastplayed,md_releasedate">
+      <visible>false</visible>
+    </datetime>
     <rating name="md_rating">
       <visible>false</visible>
     </rating>
-	
-    <image name="md_thumbnail">
-      <visible>false</visible>
-      <origin>0.5 0.5</origin>
-      <pos>0.5 0.5</pos>
-      <minSize>1.25 1.25</minSize>
-      <color>FFFFFF0A</color>
+    <textlist name="gamelist">
+      <pos>0.052 0.28</pos>
+      <size>0.885 0.568</size>
+      <fontPath>${bodyFont}</fontPath>
+      <fontSize>0.034</fontSize>
+      <primaryColor>${text}</primaryColor>
+      <secondaryColor>${purple}</secondaryColor>
+      <selectedColor>10081D</selectedColor>
+      <selectorColor>${accent}</selectorColor>
+      <selectorHeight>0.052</selectorHeight>
+      <selectorOffsetY>0</selectorOffsetY>
+      <alignment>left</alignment>
+      <horizontalMargin>0.012</horizontalMargin>
+      <lineSpacing>1.65</lineSpacing>
+      <scrollSound>./_inc/sounds/select_shorter.wav</scrollSound>
+      <zIndex>20</zIndex>
+    </textlist>
+  </view>
+
+  <view name="detailed,video">
+    <image name="background">
+      <path>./_inc/neon/gamelist-bg.png</path>
     </image>
-	
-    <video name="md_video">
-	
+    <textlist name="gamelist">
+      <size>0.40 0.568</size>
+      <fontSize>0.032</fontSize>
+      <lineSpacing>1.75</lineSpacing>
+    </textlist>
+    <image name="md_image">
+      <pos>0.731 0.442</pos>
       <origin>0.5 0.5</origin>
-      <pos>0.776 0.388</pos>
-      <maxSize>0.347 0.46</maxSize>
+      <maxSize>0.403 0.326</maxSize>
+      <default>./_inc/neon/no-media.png</default>
+      <visible>true</visible>
+      <zIndex>30</zIndex>
+    </image>
+    <text name="md_name">
+      <pos>0.525 0.648</pos>
+      <size>0.411 0.055</size>
+      <fontPath>${titleFont}</fontPath>
+      <fontSize>0.034</fontSize>
+      <color>${accent}</color>
+      <forceUppercase>true</forceUppercase>
+      <visible>true</visible>
+    </text>
+    <text name="md_description">
+      <pos>0.525 0.718</pos>
+      <size>0.411 0.14</size>
+      <fontPath>${bodyFont}</fontPath>
+      <fontSize>0.025</fontSize>
+      <color>${muted}</color>
+      <lineSpacing>1.25</lineSpacing>
+      <visible>true</visible>
+    </text>
+  </view>
+
+  <view name="video">
+    <video name="md_video">
+      <pos>0.731 0.442</pos>
+      <origin>0.5 0.5</origin>
+      <maxSize>0.403 0.326</maxSize>
       <delay>0.7</delay>
       <showSnapshotNoVideo>true</showSnapshotNoVideo>
       <showSnapshotDelay>true</showSnapshotDelay>
       <snapshotSource>image</snapshotSource>
-	  <effect>none</effect>
+      <zIndex>31</zIndex>
     </video>
-	
-    <text name="md_description">
-	
-      <pos>0.605 0.685</pos>
-      <size>0.347 0.183</size>
-      <color>ffffff</color>
-      <fontSize>0.025</fontSize>
-      <fontPath>./assets/noto.ttf</fontPath>
-	  
-    </text>
-	
-    <image name="logo">
-      <pos>1 1</pos>
-      <color>00000000</color>
-      <path>./assets/box.png</path>
-    </image>
-	
   </view>
-  
-  <view name="basic, detailed">
-  
-    <textlist name="gamelist">
-      <selectorColor>0f85a5</selectorColor>
-      <selectorColorEnd>0F6585</selectorColorEnd>
-      <selectedColor>ffffff</selectedColor>
-      <primaryColor>ffffff</primaryColor>
-      <secondaryColor>ffffff</secondaryColor>
-      <fontPath>./assets/SST.ttf</fontPath>
-      <fontSize>0.03</fontSize>
-      <pos>0.051 0.170</pos>
-      <size>0.50 0.70</size>
-      <alignment>left</alignment>
-      <horizontalMargin>0.01</horizontalMargin>
-      <origin>0 0</origin>
-      <lineSpacing>2.1</lineSpacing>
-      <selectorImagePath>./assets/box.png</selectorImagePath>
-      <selectorOffsetY>-0.01</selectorOffsetY>
-      <selectorHeight>0.0675</selectorHeight>
-    </textlist>
-	
-  </view>
-  
-  <view name="grid">
-  
-    <image name="md_image">
-      <visible>false</visible>
-    </image>
-	
-    <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_players, md_lbl_lastplayed, md_lbl_playcount">
-      <color>A0A0B000</color>
-    </text>
-	
-    <text name="md_developer, md_publisher, md_genre, md_players, md_playcount">
-      <color>ffffff00</color>
-    </text>
-	
-    <datetime name="md_releasedate, md_lastplayed">
-      <color>ffffff00</color>
-    </datetime>
-	
-    <text name="md_rating">
-      <pos>0.88 0.88</pos>
-      <size>0.05 0.03</size>
-    </text>
-	
-    <text name="md_name">
-      <color>ffffffff</color>
-      <pos>0.051 0.16</pos>
-      <size>0.50 0.07</size>
-      <alignment>center</alignment>
-      <glowColor>00000005</glowColor>
-      <glowSize>3</glowSize>
-    </text>
-	
-    <imagegrid name="gamegrid">
-      <pos>0.047 0.200</pos>
-      <size>0.51 0.67</size>
-      <margin>0.005 0.010</margin>
-      <padding>0.03 0.05 0.03 0.04</padding>
-      <autoLayout>3 1</autoLayout>
-      <autoLayoutSelectedZoom>1.40</autoLayoutSelectedZoom>
-      <animateSelection>false</animateSelection>
-      <scrollDirection>horizontal</scrollDirection>
-      <centerSelection>true</centerSelection>
-      <scrollLoop>true</scrollLoop>
-    </imagegrid>
-	
-    <gridtile name="default">
-      <backgroundColor>FFFFFF00</backgroundColor>
-      <backgroundCornerSize>9 9</backgroundCornerSize>
-      <selectionMode>image</selectionMode>
-      <padding>5 5</padding>
-      <imageColor>FFFFFF90</imageColor>
-      <reflexion>0.24 0.0</reflexion>
-    </gridtile>
-	
-    <gridtile name="selected">
-      <backgroundColor>FFFFFF00</backgroundColor>
-      <imageColor>FFFFFFFF</imageColor>
-    </gridtile>
-    <!--
-    <text name="gridtile">
-      <color>D0D0D0</color>
-      <backgroundColor>00000000</backgroundColor>
-      <fontSize>0.022</fontSize>
-      <alignment>center</alignment>
-      <size>1 0.24</size>
-    </text>
-    <text name="gridtile_selected">
-      <color>FFFFFF</color>
-      <glowColor>${glowColor}</glowColor>
-      <glowSize>3</glowSize>
-    </text>-->
-  </view>
-  <view name="system">
-  
-    <carousel name="systemcarousel">
-      <type>horizontal</type>
-      <pos>0 0.41</pos>
-      <size>1 0.3925</size>
-      <origin>0 0</origin>
-      <color>00000000</color>
-      <logoScale>1</logoScale>
-      <logoSize>0.25 0.155</logoSize>
-      <logoPos>-1 0</logoPos>
-    </carousel>
-	
-    <text name="systemInfo">
-      <pos>0 0.66</pos>
-      <size>1 0.25</size>
-      <backgroundColor>00000000</backgroundColor>
-      <color>ffffff</color>
-      <fontPath>./assets/SST.ttf</fontPath>
-      <fontSize>0.03</fontSize>
-    </text>
-	
-  </view>
-  
-  <variables>
-	  <fullscreenfixSubsetname>Emulationstation Screen Size</fullscreenfixSubsetname>
-	  <backgroundSubsetName>Choose Background</backgroundSubsetName>
-  </variables>
-  
-  <subset name="fullscreenfix" displayName="${fullscreenfixSubsetname}">
-  <include name="ES Header">./header.xml</include>
-  <include name="ES Fullscreen">./fullscreen.xml</include>
-  <include name="4:3">./fullscreenv.xml</include>
-  </subset>
 
-  <subset name="background" displayName="${backgroundSubsetname}">
-    <include name="default"/>
-    <include name="earth">./assets/bg2.xml</include>
-    <include name="abstract">./assets/bg4.xml</include>
-    <include name="vinyl">./assets/bg1.xml</include>
-    <include name="lake">./assets/bg3.xml</include>
-  </subset>
-  
+  <view name="menu">
+    <menuBackground name="menubg">
+      <color>2B1943</color>
+      <centerColor>1B102D</centerColor>
+    </menuBackground>
+    <menuText name="menutext,menutitle,menufooter">
+      <fontPath>${titleFont}</fontPath>
+      <fontSize>0.034</fontSize>
+      <color>${text}</color>
+      <separatorColor>493260</separatorColor>
+      <selectorColor>${accent}</selectorColor>
+      <selectedColor>10081D</selectedColor>
+    </menuText>
+    <menuText name="menutitle">
+      <color>${accent}</color>
+    </menuText>
+    <menuTextSmall name="menutextsmall">
+      <fontPath>${bodyFont}</fontPath>
+      <fontSize>0.025</fontSize>
+      <color>${muted}</color>
+    </menuTextSmall>
+  </view>
+
+  <view name="screen">
+    <text name="clock">
+      <pos>0.71 0.056</pos>
+      <size>0.13 0.04</size>
+      <fontPath>${titleFont}</fontPath>
+      <fontSize>0.028</fontSize>
+      <alignment>right</alignment>
+      <color>${text}</color>
+    </text>
+    <batteryIndicator name="batteryIndicator">
+      <pos>0.87 0.057</pos>
+      <size>0.075 0.032</size>
+      <color>${accent}</color>
+      <itemSpacing>0.008</itemSpacing>
+      <full>./_inc/images/battery/battery-100.svg</full>
+      <at75>./_inc/images/battery/battery-75.svg</at75>
+      <at50>./_inc/images/battery/battery-50.svg</at50>
+      <at25>./_inc/images/battery/battery-25.svg</at25>
+      <empty>./_inc/images/battery/battery-0.svg</empty>
+      <incharge>./_inc/images/battery/battery-charging.svg</incharge>
+      <networkIcon>./_inc/images/wifi.svg</networkIcon>
+    </batteryIndicator>
+  </view>
 </theme>
